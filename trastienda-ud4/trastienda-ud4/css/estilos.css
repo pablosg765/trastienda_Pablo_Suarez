@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: lightblue;
+}
+
+a {
+    color: darkblue;
+}
+
+/* Pestaña activa */
+nav a[aria-current="page"] {
+    color: #2563eb;
+    font-weight: 700;
+}
+
+/* Enlaces que no están activos */
+nav a:not([aria-current="page"]) {
+    color: #64748b;
+}
+
+/* Cuando pasamos el ratón */
+nav a:hover {
+    color: #1e293b;
+}
+
+/* Cuando seleccionamos con el teclado */
+nav a:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Estilos de las tarjetas */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Primera tarjeta después del título */
+h2 + .card {
+    border-top: 2px solid #2563eb;
+}
+
+/* Ocultar badges vacíos */
+.badge:empty {
+    display: none;
+}
+
+/* Resaltar tarjetas que tienen un badge con texto */
+article:has(.badge:not(:empty)) {
+    border-color: #2563eb;
+}
+
+/* Botones con aria-label */
+button[aria-label] {
+    cursor: pointer;
+}
